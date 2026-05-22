@@ -8,7 +8,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         const user = users.find(u => u.username === usuario && u.password === senha);
         if (user) {
             localStorage.setItem('loggedUser', JSON.stringify(user)); // Armazena o usuário logado
-            window.location.href = '../index.html'; // Redireciona para a página principal
+            window.location.href = '../../index.html'; // Redireciona para a página principal
         } else {
             alert('Usuário ou senha incorretos. Por favor, tente novamente.');
         }
