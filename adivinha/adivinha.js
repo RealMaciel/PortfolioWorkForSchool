@@ -3,6 +3,13 @@ let tries = 0;
 
 document.getElementById("btn").addEventListener("click", function() {
     let tentativa = document.getElementById("guess").value;
+    if (tries >= 10) {
+        document.getElementById("message").textContent = "Você perdeu! O número era " + math;
+        document.getElementById("message").style.color = "red";
+        tries = 0;
+        math = Math.floor(Math.random() * 100) + 1;
+        return;
+    }
     if (tentativa == math) {
         document.getElementById("message").textContent = "Parabéns! Você acertou!";
         document.getElementById("message").style.color = "green";
